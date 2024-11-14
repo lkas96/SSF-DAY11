@@ -20,7 +20,7 @@ public class VttpDay11LectureApplication {
 		
 		ApplicationArguments cliargs = new DefaultApplicationArguments(args);
 
-		if(cliargs.containsOption(port)){
+		if(cliargs.containsOption("port")){
 			port = cliargs.getOptionValues("port").get(0);
 		}
 
@@ -28,9 +28,11 @@ public class VttpDay11LectureApplication {
 
 		String dirFile = "";
 		if (cliargs.containsOption("file")){
-			dirFile = cliargs.getOptionValues("file").get(1);
+			dirFile = cliargs.getOptionValues("file").get(0);
 			System.out.printf("Directory file: ", dirFile);
 		}
+
+		app.run(args);
 
 	}
 

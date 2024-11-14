@@ -43,3 +43,11 @@ Run the application in embedded localhost server
 # Others
 To run the JAR/WAR file
 Just run the jar command
+
+
+
+# Railway CLI - Command Line
+1. railway login
+2. railway link
+3. railway up
+## Execute in Command Prompt of the project root folder
