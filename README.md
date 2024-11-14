@@ -34,7 +34,7 @@ Delete target, redownload dependencies, recompile to class file and package to J
 3. mvnw.cmd clean package
 
 Run the application in embedded localhost server 
-4. mvnw.cmd sprint-boot:run
+4. mvnw.cmd spring-boot:run
 (Running the application without any arguments)
 
 
