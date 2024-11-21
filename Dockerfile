@@ -6,7 +6,7 @@ LABEL name="vttp-day11-lecture"
 ARG APP_DIR=/APP_DIR
 COPY pom.xml .
 COPY mvnw .
-COPY nvmw.cmd .
+COPY mvnw.cmd .
 COPY src src
 COPY .mvn .
 
