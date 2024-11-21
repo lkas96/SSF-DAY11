@@ -3,14 +3,18 @@ FROM eclipse-temurin:23-jdk
 LABEL description="Day 11 docker practice, mama a girl behind you"
 LABEL name="vttp-day11-lecture"
 
-ARG APP_DIR=/APP_DIR
+ARG APP_DIR=/APP
+
+WORKDIR ${APP_DIR}
+
 COPY pom.xml .
 COPY mvnw .
 COPY mvnw.cmd .
 COPY src src
-COPY .mvn .
+COPY .mvn .mvn
 
-RUN mvn package -Dmaven.test.skip=true
+# RUN mvn package -Dmaven.test.skip=true
+RUN chmod a+x ./mvnw && ./mvnw clean package -Dmaven.test.skip=true
 
 ENV SERVER_PORT 2980
 
